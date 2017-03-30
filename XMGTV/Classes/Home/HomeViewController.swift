@@ -48,9 +48,9 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
-        // 1> RGB
-        // 2> 十六进制颜色 #FF0000 ##FF0000 0xFF0000 #ff0000
-        view.backgroundColor = UIColor.randomColor()
+        
+    
+    
     }
     
 }
