@@ -54,7 +54,7 @@ class RecommendViewController: UIViewController {
 
         collectionView.backgroundColor = UIColor.white
         collectionView.dataSource = self
-    collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kNormalcellID)
+        collectionView.register(UINib.init(nibName: "CollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalcellID)
         // MARK: - 注册这个(从XIB注册)collectionView的头部
         
      collectionView.register(UINib.init(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
@@ -69,8 +69,7 @@ class RecommendViewController: UIViewController {
         super.viewDidLoad()
 
          view.backgroundColor = UIColor.white
-   
-        setupUI()
+          setupUI()
     }
 
     
@@ -121,7 +120,7 @@ extension RecommendViewController : UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalcellID, for: indexPath)
         
-        cell.backgroundColor = UIColor.randomColor()
+      //  cell.backgroundColor = UIColor.randomColor()
         
         
         

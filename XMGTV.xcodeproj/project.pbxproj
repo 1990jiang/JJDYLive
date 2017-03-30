@@ -30,6 +30,8 @@
 		9145B9961E8CE60400F8689E /* FunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145B9951E8CE60400F8689E /* FunnyViewController.swift */; };
 		9145B99A1E8D068100F8689E /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145B9981E8D068100F8689E /* CollectionHeaderView.swift */; };
 		9145B99B1E8D068100F8689E /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9145B9991E8D068100F8689E /* CollectionHeaderView.xib */; };
+		9145B99F1E8D182900F8689E /* CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145B99D1E8D182900F8689E /* CollectionNormalCell.swift */; };
+		9145B9A01E8D182900F8689E /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9145B99E1E8D182900F8689E /* CollectionNormalCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		9145B9951E8CE60400F8689E /* FunnyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyViewController.swift; sourceTree = "<group>"; };
 		9145B9981E8D068100F8689E /* CollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		9145B9991E8D068100F8689E /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
+		9145B99D1E8D182900F8689E /* CollectionNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionNormalCell.swift; sourceTree = "<group>"; };
+		9145B99E1E8D182900F8689E /* CollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,7 +221,6 @@
 		9145B9791E8CDCB900F8689E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9145B9971E8D064400F8689E /* 推荐界面自定义CollectionHeader */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -295,6 +298,8 @@
 		9145B9861E8CE47900F8689E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9145B99C1E8D173400F8689E /* 推荐-自定义Cell */,
+				9145B9971E8D064400F8689E /* 推荐界面自定义CollectionHeader */,
 				9145B9871E8CE47900F8689E /* RollPageTitleView */,
 			);
 			path = View;
@@ -323,7 +328,18 @@
 				9145B9981E8D068100F8689E /* CollectionHeaderView.swift */,
 				9145B9991E8D068100F8689E /* CollectionHeaderView.xib */,
 			);
-			path = "推荐界面自定义CollectionHeader";
+			name = "推荐界面自定义CollectionHeader";
+			path = "../../Home/View/推荐界面自定义CollectionHeader";
+			sourceTree = "<group>";
+		};
+		9145B99C1E8D173400F8689E /* 推荐-自定义Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9145B99D1E8D182900F8689E /* CollectionNormalCell.swift */,
+				9145B99E1E8D182900F8689E /* CollectionNormalCell.xib */,
+			);
+			name = "推荐-自定义Cell";
+			path = "../../Home/View/推荐-自定义Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +403,7 @@
 			files = (
 				18CAC9C41DD181B7006A328E /* Rank.storyboard in Resources */,
 				9145B99B1E8D068100F8689E /* CollectionHeaderView.xib in Resources */,
+				9145B9A01E8D182900F8689E /* CollectionNormalCell.xib in Resources */,
 				18CAC9AF1DD180B9006A328E /* LaunchScreen.storyboard in Resources */,
 				18CAC9AC1DD180B9006A328E /* Assets.xcassets in Resources */,
 				18CAC9AA1DD180B9006A328E /* Main.storyboard in Resources */,
@@ -413,6 +430,7 @@
 				7019E7411DF3B1EC008F913D /* RankViewController.swift in Sources */,
 				7019E73F1DF3B14C008F913D /* HomeViewController.swift in Sources */,
 				9145B98B1E8CE4B500F8689E /* PageTitleView.swift in Sources */,
+				9145B99F1E8D182900F8689E /* CollectionNormalCell.swift in Sources */,
 				9145B9941E8CE5F800F8689E /* AmuseViewController.swift in Sources */,
 				7019E7431DF3B254008F913D /* XMGNavigationController.swift in Sources */,
 				9145B98E1E8CE52A00F8689E /* Common.swift in Sources */,
