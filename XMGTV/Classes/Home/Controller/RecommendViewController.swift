@@ -24,7 +24,7 @@ private let kNormalcellID = "normalCellID"
 private let kHeaderViewID = "headerViewID"
 
 //item每组头部高度
-private let kHeaderViewH : CGFloat = 25
+private let kHeaderViewH : CGFloat = 50
 
 
 class RecommendViewController: UIViewController {
@@ -39,20 +39,25 @@ class RecommendViewController: UIViewController {
         layout.itemSize = CGSize(width: kItemW, height: kItemH)
         //行间距--基本没有
         layout.minimumLineSpacing = 0
-        //item间的间距
+        //item间的间距--再次理解一下这个最小间距的意思，我们给其设置为10，就是说这个item之间的最小距离不能小于10，但是是可以大于10的，所以我们这里还需要设置这个collectionView-item的内边距，才能实现想要的左右有间距，中间有间隔的效果
         layout.minimumInteritemSpacing = kItemMargin
        //垂直滚动
         layout.scrollDirection = .vertical
        //设置每组头部尺寸
         layout.headerReferenceSize = CGSize(width: kScreenW, height: kHeaderViewH)
+        layout.sectionInset = UIEdgeInsetsMake(0, kItemMargin, 0, kItemMargin)
         
-        //2.初始化
-        let collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height - 64 - 44 - 64 ), collectionViewLayout: layout)
-        collectionView.backgroundColor = UIColor.orange
+        //2.初始化--这个collectionView的高度，要减去导航栏和状态栏，titleView,底部tabBar的高度
+        let collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height - 64 - 44 - 44 ), collectionViewLayout: layout)
+        //不想去减掉这些高度，可以设置collectionView的宽度和高度随着父控件的高度和宽度缩放--我们在这个homeViewController中设置这个推荐控制器的view的范围。然后我们在这个推荐控制器中调用self.view.bounds的时候，它依然是屏幕尺寸，这个时候我们的collectionView的尺寸就搞成了屏幕尺寸了。而推荐控制器的View自己切缩放为父控制器中设置的了。把我们的collectionView坑惨了
+        //collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+
+        collectionView.backgroundColor = UIColor.white
         collectionView.dataSource = self
     collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kNormalcellID)
-        // MARK: - 注册这个collectionView的头部
-        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
+        // MARK: - 注册这个(从XIB注册)collectionView的头部
+        
+     collectionView.register(UINib.init(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
         
         return collectionView
     
@@ -86,8 +91,9 @@ extension RecommendViewController {
         //1.添加collectionView
         view.addSubview(collectionView)
     
-
-    }
+       
+        
+      }
 
 
 
@@ -126,9 +132,10 @@ extension RecommendViewController : UICollectionViewDataSource {
     //返回头部视图的方法
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        //1.取出headerView
+        //1.取出headerView--就算是从XIB中创建的也不用像cell一样要去单独创建一下
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath)
-        headerView.backgroundColor = UIColor.randomColor()
+       
+        
         
     return headerView
     
