@@ -32,6 +32,8 @@
 		9145B99B1E8D068100F8689E /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9145B9991E8D068100F8689E /* CollectionHeaderView.xib */; };
 		9145B99F1E8D182900F8689E /* CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145B99D1E8D182900F8689E /* CollectionNormalCell.swift */; };
 		9145B9A01E8D182900F8689E /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9145B99E1E8D182900F8689E /* CollectionNormalCell.xib */; };
+		9158C76B1E8DE488002FBF46 /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9158C7691E8DE488002FBF46 /* CollectionPrettyCell.swift */; };
+		9158C76C1E8DE488002FBF46 /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9158C76A1E8DE488002FBF46 /* CollectionPrettyCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		9145B9991E8D068100F8689E /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
 		9145B99D1E8D182900F8689E /* CollectionNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionNormalCell.swift; sourceTree = "<group>"; };
 		9145B99E1E8D182900F8689E /* CollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
+		9158C7691E8DE488002FBF46 /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
+		9158C76A1E8DE488002FBF46 /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +302,7 @@
 		9145B9861E8CE47900F8689E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9158C7681E8DE473002FBF46 /* 自定义颜值cell */,
 				9145B99C1E8D173400F8689E /* 推荐-自定义Cell */,
 				9145B9971E8D064400F8689E /* 推荐界面自定义CollectionHeader */,
 				9145B9871E8CE47900F8689E /* RollPageTitleView */,
@@ -340,6 +345,15 @@
 			);
 			name = "推荐-自定义Cell";
 			path = "../../Home/View/推荐-自定义Cell";
+			sourceTree = "<group>";
+		};
+		9158C7681E8DE473002FBF46 /* 自定义颜值cell */ = {
+			isa = PBXGroup;
+			children = (
+				9158C7691E8DE488002FBF46 /* CollectionPrettyCell.swift */,
+				9158C76A1E8DE488002FBF46 /* CollectionPrettyCell.xib */,
+			);
+			path = "自定义颜值cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,6 +422,7 @@
 				18CAC9AC1DD180B9006A328E /* Assets.xcassets in Resources */,
 				18CAC9AA1DD180B9006A328E /* Main.storyboard in Resources */,
 				18CAC9C21DD18171006A328E /* Home.storyboard in Resources */,
+				9158C76C1E8DE488002FBF46 /* CollectionPrettyCell.xib in Resources */,
 				18CAC9C91DD182A4006A328E /* Profile.storyboard in Resources */,
 				18CAC9C71DD18219006A328E /* Discover.storyboard in Resources */,
 			);
@@ -420,6 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9158C76B1E8DE488002FBF46 /* CollectionPrettyCell.swift in Sources */,
 				18CAC9CC1DD182E7006A328E /* MainViewController.swift in Sources */,
 				7019E7461DF3B6B8008F913D /* UIColor-Extension.swift in Sources */,
 				18CAC9A51DD180B9006A328E /* AppDelegate.swift in Sources */,

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionPrettyCell" customModule="XMGTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="186" height="242"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="186" height="242"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_location" translatesAutoresizingMaskIntoConstraints="NO" id="sC4-Jh-mcW">
+                        <rect key="frame" x="8" y="222" width="12" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="12" id="FjD-6m-G9t"/>
+                            <constraint firstAttribute="height" constant="12" id="NUH-0t-HT4"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成都市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWb-7j-mwM">
+                        <rect key="frame" x="23" y="221" width="34" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="Mxj-2o-Kdv"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="蒋帅哥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2a-EB-cXP">
+                        <rect key="frame" x="8" y="199" width="43" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="GZ8-8f-C5s"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_cell_default_phone" translatesAutoresizingMaskIntoConstraints="NO" id="OTH-sf-mL8">
+                        <rect key="frame" x="0.0" y="0.0" width="186" height="194"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8888在线" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9te-zt-JKt">
+                        <rect key="frame" x="119" y="5" width="62" height="16"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.19509698275862075" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="62" id="BaB-kc-L8T"/>
+                            <constraint firstAttribute="height" constant="16" id="fre-k7-Hqc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ZWb-7j-mwM" firstAttribute="centerY" secondItem="sC4-Jh-mcW" secondAttribute="centerY" id="5ug-lW-k3J"/>
+                <constraint firstAttribute="bottom" secondItem="sC4-Jh-mcW" secondAttribute="bottom" constant="8" id="6nE-qn-X8k"/>
+                <constraint firstAttribute="trailing" secondItem="OTH-sf-mL8" secondAttribute="trailing" id="BVY-vl-bds"/>
+                <constraint firstItem="OTH-sf-mL8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ByA-kz-fVg"/>
+                <constraint firstItem="9te-zt-JKt" firstAttribute="trailing" secondItem="OTH-sf-mL8" secondAttribute="trailing" constant="-5" id="GGn-fF-4TE"/>
+                <constraint firstItem="sC4-Jh-mcW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Heb-Ex-SaP"/>
+                <constraint firstItem="i2a-EB-cXP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="bDp-ou-5hK"/>
+                <constraint firstItem="ZWb-7j-mwM" firstAttribute="leading" secondItem="sC4-Jh-mcW" secondAttribute="trailing" constant="3" id="hv2-Ei-SEg"/>
+                <constraint firstItem="9te-zt-JKt" firstAttribute="top" secondItem="OTH-sf-mL8" secondAttribute="top" constant="5" id="iaM-qv-9ka"/>
+                <constraint firstItem="OTH-sf-mL8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="lfE-Er-PvF"/>
+                <constraint firstItem="sC4-Jh-mcW" firstAttribute="top" secondItem="i2a-EB-cXP" secondAttribute="bottom" constant="6" id="txY-lL-fmI"/>
+                <constraint firstItem="i2a-EB-cXP" firstAttribute="top" secondItem="OTH-sf-mL8" secondAttribute="bottom" constant="5" id="vNZ-YV-1TW"/>
+            </constraints>
+            <size key="customSize" width="186" height="242"/>
+            <connections>
+                <outlet property="onlineLabel" destination="9te-zt-JKt" id="YBN-cV-X7k"/>
+                <outlet property="prettyImg" destination="OTH-sf-mL8" id="zI4-8p-Sbg"/>
+            </connections>
+            <point key="canvasLocation" x="13" y="3"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ico_location" width="12" height="12"/>
+        <image name="live_cell_default_phone" width="103" height="103"/>
+    </resources>
+</document>

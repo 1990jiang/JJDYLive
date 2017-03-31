@@ -13,13 +13,22 @@ import UIKit
 
 //item间距
 private let kItemMargin : CGFloat = 10
-//item的宽度
+
+//普通item的宽度
 private let kItemW = (kScreenW - 3 * kItemMargin) / 2
-//item的高度 --大概估计的
-private let kItemH = kItemW * 3 / 4
+
+//普通item的高度 --大概估计的
+private let kNorItemH = kItemW * 3 / 4
+
+//颜值item的高度 --大概估计的
+private let kPrettyItemH = kItemW * 4 / 3
 
 //普通cellID
 private let kNormalcellID = "normalCellID"
+
+//颜值cellID
+private let kPrettyCellID = "kPrettyCellID"
+
 //组头ID
 private let kHeaderViewID = "headerViewID"
 
@@ -36,7 +45,7 @@ class RecommendViewController: UIViewController {
         [unowned self] in
         //1.布局
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: kItemW, height: kItemH)
+        layout.itemSize = CGSize(width: kItemW, height: kNorItemH)
         //行间距--基本没有
         layout.minimumLineSpacing = 0
         //item间的间距--再次理解一下这个最小间距的意思，我们给其设置为10，就是说这个item之间的最小距离不能小于10，但是是可以大于10的，所以我们这里还需要设置这个collectionView-item的内边距，才能实现想要的左右有间距，中间有间隔的效果
@@ -54,8 +63,14 @@ class RecommendViewController: UIViewController {
 
         collectionView.backgroundColor = UIColor.white
         collectionView.dataSource = self
+       //设置代理，在代理中来返回具体哪组cell的高度
+        collectionView.delegate = self
+        
+        
+        // MARK:- 注册不同的cell
         collectionView.register(UINib.init(nibName: "CollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalcellID)
-        // MARK: - 注册这个(从XIB注册)collectionView的头部
+        collectionView.register(UINib.init(nibName: "CollectionPrettyCell", bundle: nil), forCellWithReuseIdentifier: kPrettyCellID)
+       // MARK: - 注册这个(从XIB注册)collectionView的头部
         
      collectionView.register(UINib.init(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
         
@@ -117,14 +132,19 @@ extension RecommendViewController : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalcellID, for: indexPath)
-        
-      //  cell.backgroundColor = UIColor.randomColor()
-        
-        
-        
+        //1.定义cell
+        var cell : UICollectionViewCell!
+        //2.取出cell
+        if indexPath.section == 1 {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath)
+        }else{
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalcellID, for: indexPath)
+        }
         return cell
+      
+        
+      
+        
         
     }
     
@@ -140,15 +160,24 @@ extension RecommendViewController : UICollectionViewDataSource {
     
     }
     
-    
-    
-    
-    
-    
 }
 
 
-
+// MARK:- CollectionViewDelegate 代理方法
+//UICollectionViewDelegateFlowLayout :这个协议是继承自UICollectionViewDelegate,因为我们是处理这个返回item的高度的，所以用这个代理协议
+extension RecommendViewController : UICollectionViewDelegateFlowLayout {
+    
+    //返回具体某一行或某一组item的高度
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if indexPath.section == 1 {
+            return CGSize(width: kItemW, height: kPrettyItemH)
+        }
+        return CGSize(width: kItemW, height: kNorItemH)
+    }
+    
+    
+}
 
 
 
