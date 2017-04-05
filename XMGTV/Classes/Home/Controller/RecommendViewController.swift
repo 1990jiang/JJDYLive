@@ -11,6 +11,22 @@
 import UIKit
 
 
+// MARK:- 青花瓷抓取数据步骤
+/*
+ 1.安装一个破解版的青花瓷
+ 2.打开电脑网络找到ip地址
+ 3.打开手机，找到和电脑连接的那个相同的wifi环境.点击后面的小叹号,找到HTTP代理
+ 4.点击手动，设置服务器，在服务器中输入电脑中查到的ip地址
+ 5.设置端口号:默认的是8888
+ 6.青花瓷这个时候会发一个是否允许当前ip访问的请求，我们要同意
+ 7.接着打开斗鱼，会发现在青花瓷的Sequence中有很多请求，很杂乱。
+ 8.我们点击清除，将所有的清除，然后下拉刷新一下界面。 这样返回的就只是当前页面的网络请求了
+ 9.分析一个请求，直接copy一个请求，在浏览器中打开，会有json数据返回。然后我们登录www.kison.com.将json数据复制到json在线解析中
+ 10.
+ 
+ 
+ */
+
 //item间距
 private let kItemMargin : CGFloat = 10
 
@@ -77,14 +93,21 @@ class RecommendViewController: UIViewController {
         return collectionView
     
     }()
-    
+     //懒加载这个ViewModel这个属性，让这个来管理这个网络请求之类的
+    fileprivate lazy var recommendVM : RecommendViewModel = RecommendViewModel()
     
     // MARK:- 系统回调函数
     override func viewDidLoad() {
         super.viewDidLoad()
 
          view.backgroundColor = UIColor.white
-          setupUI()
+        
+        //1.设置UI
+        setupUI()
+    
+    //2.请求数据
+        loadData()
+    
     }
 
     
@@ -105,14 +128,24 @@ extension RecommendViewController {
         //1.添加collectionView
         view.addSubview(collectionView)
     
-       
+    }
+}
+
+// MARK:- 请求数据
+extension RecommendViewController {
+    
+    
+    fileprivate func loadData(){
+        NetworkTools.requestData(<#T##type: MethodType##MethodType#>, URLString: <#T##String#>, parameters: <#T##[String : Any]?#>, finishedCallback: <#T##(Any) -> ()#>)
         
-      }
-
-
-
-
-
+        
+    }
+    
+    
+    
+    
+    
+    
 }
 
 

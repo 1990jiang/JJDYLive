@@ -34,6 +34,9 @@
 		9145B9A01E8D182900F8689E /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9145B99E1E8D182900F8689E /* CollectionNormalCell.xib */; };
 		9158C76B1E8DE488002FBF46 /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9158C7691E8DE488002FBF46 /* CollectionPrettyCell.swift */; };
 		9158C76C1E8DE488002FBF46 /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9158C76A1E8DE488002FBF46 /* CollectionPrettyCell.xib */; };
+		916533321E94C9DB0070C8A5 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916533311E94C9DB0070C8A5 /* NetworkTools.swift */; };
+		916533351E94D3D10070C8A5 /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916533341E94D3D10070C8A5 /* RecommendViewModel.swift */; };
+		C19B8859CCBA277403833D50 /* Pods_XMGTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55FE755E783E96696C301CEE /* Pods_XMGTV.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,10 +51,13 @@
 		18CAC9C61DD18219006A328E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
 		18CAC9C81DD182A4006A328E /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = ../../Profile.storyboard; sourceTree = "<group>"; };
 		18CAC9CB1DD182E7006A328E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1C1E6784B5E90C6C0341B5BF /* Pods-XMGTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMGTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XMGTV/Pods-XMGTV.debug.xcconfig"; sourceTree = "<group>"; };
+		55FE755E783E96696C301CEE /* Pods_XMGTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMGTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7019E73E1DF3B14C008F913D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../HomeViewController.swift; sourceTree = "<group>"; };
 		7019E7401DF3B1EC008F913D /* RankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
 		7019E7421DF3B254008F913D /* XMGNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMGNavigationController.swift; sourceTree = "<group>"; };
 		7019E7451DF3B6B8008F913D /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		8600ED4E541F7D97B6EA9D37 /* Pods-XMGTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMGTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-XMGTV/Pods-XMGTV.release.xcconfig"; sourceTree = "<group>"; };
 		9145B9831E8CDE6F00F8689E /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		9145B9881E8CE4B500F8689E /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		9145B9891E8CE4B500F8689E /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
@@ -66,6 +72,8 @@
 		9145B99E1E8D182900F8689E /* CollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
 		9158C7691E8DE488002FBF46 /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
 		9158C76A1E8DE488002FBF46 /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
+		916533311E94C9DB0070C8A5 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		916533341E94D3D10070C8A5 /* RecommendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C19B8859CCBA277403833D50 /* Pods_XMGTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +93,8 @@
 			children = (
 				18CAC9A31DD180B9006A328E /* XMGTV */,
 				18CAC9A21DD180B9006A328E /* Products */,
+				EAA5CD568A460C5843D05661 /* Pods */,
+				5E1943A1E3F48447FD64260B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +154,7 @@
 		18CAC9B91DD1811A006A328E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				916533331E94D2DC0070C8A5 /* ViewModel */,
 				9145B9771E8CDCB900F8689E /* Controller */,
 				9145B9781E8CDCB900F8689E /* Model */,
 				9145B9791E8CDCB900F8689E /* View */,
@@ -192,6 +204,14 @@
 				7019E7421DF3B254008F913D /* XMGNavigationController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		5E1943A1E3F48447FD64260B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55FE755E783E96696C301CEE /* Pods_XMGTV.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7019E7441DF3B696008F913D /* Extension */ = {
@@ -323,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				9145B98D1E8CE52A00F8689E /* Common.swift */,
+				916533311E94C9DB0070C8A5 /* NetworkTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -356,6 +377,23 @@
 			path = "自定义颜值cell";
 			sourceTree = "<group>";
 		};
+		916533331E94D2DC0070C8A5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				916533341E94D3D10070C8A5 /* RecommendViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EAA5CD568A460C5843D05661 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C1E6784B5E90C6C0341B5BF /* Pods-XMGTV.debug.xcconfig */,
+				8600ED4E541F7D97B6EA9D37 /* Pods-XMGTV.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -363,9 +401,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18CAC9B31DD180B9006A328E /* Build configuration list for PBXNativeTarget "XMGTV" */;
 			buildPhases = (
+				F1AA98DCBFC3D856C095F0C8 /* [CP] Check Pods Manifest.lock */,
 				18CAC99D1DD180B9006A328E /* Sources */,
 				18CAC99E1DD180B9006A328E /* Frameworks */,
 				18CAC99F1DD180B9006A328E /* Resources */,
+				02CDF3AE24FDCB5B7087FEDF /* [CP] Embed Pods Frameworks */,
+				69EC4165CDA5D65A71E847B2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -430,6 +471,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02CDF3AE24FDCB5B7087FEDF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XMGTV/Pods-XMGTV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69EC4165CDA5D65A71E847B2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XMGTV/Pods-XMGTV-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1AA98DCBFC3D856C095F0C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18CAC99D1DD180B9006A328E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -440,6 +529,7 @@
 				7019E7461DF3B6B8008F913D /* UIColor-Extension.swift in Sources */,
 				18CAC9A51DD180B9006A328E /* AppDelegate.swift in Sources */,
 				9145B9961E8CE60400F8689E /* FunnyViewController.swift in Sources */,
+				916533351E94D3D10070C8A5 /* RecommendViewModel.swift in Sources */,
 				9145B98A1E8CE4B500F8689E /* PageContentView.swift in Sources */,
 				9145B9921E8CE5EB00F8689E /* GameViewController.swift in Sources */,
 				9145B99A1E8D068100F8689E /* CollectionHeaderView.swift in Sources */,
@@ -449,6 +539,7 @@
 				9145B99F1E8D182900F8689E /* CollectionNormalCell.swift in Sources */,
 				9145B9941E8CE5F800F8689E /* AmuseViewController.swift in Sources */,
 				7019E7431DF3B254008F913D /* XMGNavigationController.swift in Sources */,
+				916533321E94C9DB0070C8A5 /* NetworkTools.swift in Sources */,
 				9145B98E1E8CE52A00F8689E /* Common.swift in Sources */,
 				9145B9841E8CDE6F00F8689E /* UIBarButtonItem-Extension.swift in Sources */,
 				9145B9901E8CE5D600F8689E /* RecommendViewController.swift in Sources */,
@@ -588,6 +679,7 @@
 		};
 		18CAC9B41DD180B9006A328E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C1E6784B5E90C6C0341B5BF /* Pods-XMGTV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -602,6 +694,7 @@
 		};
 		18CAC9B51DD180B9006A328E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8600ED4E541F7D97B6EA9D37 /* Pods-XMGTV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
