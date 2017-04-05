@@ -37,6 +37,8 @@
 		916533321E94C9DB0070C8A5 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916533311E94C9DB0070C8A5 /* NetworkTools.swift */; };
 		916533351E94D3D10070C8A5 /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916533341E94D3D10070C8A5 /* RecommendViewModel.swift */; };
 		916533371E94E0C70070C8A5 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916533361E94E0C70070C8A5 /* NSDate-Extension.swift */; };
+		916533391E94F0640070C8A5 /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916533381E94F0640070C8A5 /* AnchorGroup.swift */; };
+		91F699001E9530E100A305AD /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F698FF1E9530E100A305AD /* AnchorModel.swift */; };
 		C19B8859CCBA277403833D50 /* Pods_XMGTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55FE755E783E96696C301CEE /* Pods_XMGTV.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,8 @@
 		916533311E94C9DB0070C8A5 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		916533341E94D3D10070C8A5 /* RecommendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
 		916533361E94E0C70070C8A5 /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
+		916533381E94F0640070C8A5 /* AnchorGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
+		91F698FF1E9530E100A305AD /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +322,8 @@
 		9145B9851E8CE47900F8689E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				916533381E94F0640070C8A5 /* AnchorGroup.swift */,
+				91F698FF1E9530E100A305AD /* AnchorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -530,6 +536,8 @@
 				9158C76B1E8DE488002FBF46 /* CollectionPrettyCell.swift in Sources */,
 				18CAC9CC1DD182E7006A328E /* MainViewController.swift in Sources */,
 				7019E7461DF3B6B8008F913D /* UIColor-Extension.swift in Sources */,
+				916533391E94F0640070C8A5 /* AnchorGroup.swift in Sources */,
+				91F699001E9530E100A305AD /* AnchorModel.swift in Sources */,
 				18CAC9A51DD180B9006A328E /* AppDelegate.swift in Sources */,
 				9145B9961E8CE60400F8689E /* FunnyViewController.swift in Sources */,
 				916533351E94D3D10070C8A5 /* RecommendViewModel.swift in Sources */,

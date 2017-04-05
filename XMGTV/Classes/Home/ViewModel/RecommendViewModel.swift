@@ -11,7 +11,9 @@ import UIKit
 
 //不用到一些特性，就可以不继承这个class
 class RecommendViewModel  {
-    
+    // MARK:- 懒加载属性
+    //初始化一个保存模型的数组
+    fileprivate lazy var anchorGroups : [AnchorGroup] = [AnchorGroup]()
 
 }
 
@@ -40,8 +42,35 @@ extension RecommendViewModel {
         
         NetworkTools.requestData(.get, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: ["limit":"4" , "offset" : "0", "time" : NSDate.getCurrentTime()]) { (result) in
             
-            //对于打印出来的数据，我们可以进行复制到kjson这个网站，选择json在线编辑，然后看看具体的数据组成结构，分析这些数据是显示在什么位置的
-            print(result)
+            //1.将result转换成字典类型
+            guard  let resultDict = result as? [String : NSObject] else{
+                
+                print("未获取到游戏数据")
+                return
+             }
+            //2.根据data这个key拿到数据数组--具体数据结构自己打印result然后在kjson网站去在线编辑json看看
+           //根据字典的key取出这个数据arr,并且指定这个数据里面是保存的字典对象
+            guard  let dataArray = resultDict["data"] as? [[String : NSObject]] else {
+                return
+            }
+           //3.遍历数组，获取字典，并且将字典转成模型对象
+            for dict in dataArray {
+                //目前swift中没有一个完整的字典转模型的框架，我们就用KVC自己转了
+                let group = AnchorGroup(dict : dict)
+                //用数组存放字典
+                //在闭包中要用self
+                self.anchorGroups.append(group)
+            }
+        
+            //打印来看看，两层字典转模型成功没有
+            for group in self.anchorGroups {
+                
+                for anchor in group.anchors{
+                    print(anchor.nickname)
+                }
+                print("--------------------")
+            }
+            
         }
         
     }
