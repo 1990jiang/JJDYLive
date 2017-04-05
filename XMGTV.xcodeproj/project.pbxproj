@@ -36,6 +36,7 @@
 		9158C76C1E8DE488002FBF46 /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9158C76A1E8DE488002FBF46 /* CollectionPrettyCell.xib */; };
 		916533321E94C9DB0070C8A5 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916533311E94C9DB0070C8A5 /* NetworkTools.swift */; };
 		916533351E94D3D10070C8A5 /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916533341E94D3D10070C8A5 /* RecommendViewModel.swift */; };
+		916533371E94E0C70070C8A5 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916533361E94E0C70070C8A5 /* NSDate-Extension.swift */; };
 		C19B8859CCBA277403833D50 /* Pods_XMGTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55FE755E783E96696C301CEE /* Pods_XMGTV.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		9158C76A1E8DE488002FBF46 /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
 		916533311E94C9DB0070C8A5 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		916533341E94D3D10070C8A5 /* RecommendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
+		916533361E94E0C70070C8A5 /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 			children = (
 				9145B9831E8CDE6F00F8689E /* UIBarButtonItem-Extension.swift */,
 				7019E7451DF3B6B8008F913D /* UIColor-Extension.swift */,
+				916533361E94E0C70070C8A5 /* NSDate-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				9145B9921E8CE5EB00F8689E /* GameViewController.swift in Sources */,
 				9145B99A1E8D068100F8689E /* CollectionHeaderView.swift in Sources */,
 				7019E7411DF3B1EC008F913D /* RankViewController.swift in Sources */,
+				916533371E94E0C70070C8A5 /* NSDate-Extension.swift in Sources */,
 				7019E73F1DF3B14C008F913D /* HomeViewController.swift in Sources */,
 				9145B98B1E8CE4B500F8689E /* PageTitleView.swift in Sources */,
 				9145B99F1E8D182900F8689E /* CollectionNormalCell.swift in Sources */,

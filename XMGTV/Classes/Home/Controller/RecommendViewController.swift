@@ -136,9 +136,9 @@ extension RecommendViewController {
     
     
     fileprivate func loadData(){
-        NetworkTools.requestData(<#T##type: MethodType##MethodType#>, URLString: <#T##String#>, parameters: <#T##[String : Any]?#>, finishedCallback: <#T##(Any) -> ()#>)
         
-        
+      recommendVM.requestData()
+    
     }
     
     
